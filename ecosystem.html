@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonar Ecosystem - Integrations & Partners | Perplexity</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .integration-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .integration-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .integration-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .integration-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .integration-card p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+        .badge-new {
+            background: var(--success-color);
+            color: white;
+        }
+        .badge-popular {
+            background: var(--primary-color);
+            color: white;
+        }
+        .badge-beta {
+            background: var(--warning-color);
+            color: white;
+        }
+        .partner-logo {
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🔍 Sonar Ecosystem</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#frameworks">Frameworks</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#tools">Dev Tools</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="presentation.html" class="cta-btn">Interview Deck</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Sonar Ecosystem</h1>
+            <p>Integrate Sonar with your favorite tools, frameworks, and platforms</p>
+            <div class="hero-buttons">
+                <a href="#quickstart" class="btn btn-primary">Integration Guides</a>
+                <a href="#marketplace" class="btn btn-secondary">Browse Marketplace</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="section">
+        <div class="container">
+            <h2>Built for the Modern Stack</h2>
+            <p class="lead">Sonar integrates seamlessly with the tools developers already use and love</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Native Integrations</p>
+                </div>
+                <div class="stat-card">
+                    <h3>15+</h3>
+                    <p>Language SDKs</p>
+                </div>
+                <div class="stat-card">
+                    <h3>100+</h3>
+                    <p>Community Plugins</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1M+</h3>
+                    <p>Weekly API Calls</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="frameworks" class="section bg-light">
+        <div class="container">
+            <h2>AI Frameworks & Libraries</h2>
+            <p class="lead">First-class support for popular AI development frameworks</p>
+
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">🦜</div>
+                    <h4>LangChain</h4>
+                    <p>Native Sonar integration</p>
+                    <span class="badge badge-popular">Popular</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🤖</div>
+                    <h4>LlamaIndex</h4>
+                    <p>Search-augmented RAG</p>
+                    <span class="badge badge-new">New</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🧠</div>
+                    <h4>Semantic Kernel</h4>
+                    <p>Microsoft AI orchestration</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">⚡</div>
+                    <h4>Haystack</h4>
+                    <p>NLP pipelines</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🔮</div>
+                    <h4>AutoGPT</h4>
+                    <p>Autonomous agents</p>
+                    <span class="badge badge-beta">Beta</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🎭</div>
+                    <h4>CrewAI</h4>
+                    <p>Multi-agent systems</p>
+                    <span class="badge badge-new">New</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🏗️</div>
+                    <h4>Dify</h4>
+                    <p>Visual AI workflows</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🌊</div>
+                    <h4>Flowise</h4>
+                    <p>Low-code AI builder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="platforms" class="section">
+        <div class="container">
+            <h2>Cloud & Deployment Platforms</h2>
+            <p class="lead">Deploy Sonar-powered applications anywhere</p>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">▲</div>
+                    <h3>Vercel</h3>
+                    <p>One-click deployment for Sonar apps</p>
+                    <ul class="program-features">
+                        <li>Edge Functions integration</li>
+                        <li>Automatic scaling</li>
+                        <li>Built-in caching</li>
+                        <li>Templates available</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Deploy Template</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🔷</div>
+                    <h3>Netlify</h3>
+                    <p>Serverless Sonar functions</p>
+                    <ul class="program-features">
+                        <li>Functions support</li>
+                        <li>Environment variables</li>
+                        <li>CI/CD integration</li>
+                        <li>Preview deployments</li>
+                    </ul>
+                    <a href="#" class="btn-outline">View Guide</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">☁️</div>
+                    <h3>AWS</h3>
+                    <p>Enterprise-scale deployments</p>
+                    <ul class="program-features">
+                        <li>Lambda integration</li>
+                        <li>API Gateway setup</li>
+                        <li>CloudFormation templates</li>
+                        <li>Auto-scaling groups</li>
+                    </ul>
+                    <a href="#" class="btn-outline">AWS Quickstart</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🌐</div>
+                    <h3>Google Cloud</h3>
+                    <p>GCP-optimized deployment</p>
+                    <ul class="program-features">
+                        <li>Cloud Functions</li>
+                        <li>Cloud Run support</li>
+                        <li>Vertex AI integration</li>
+                        <li>BigQuery analytics</li>
+                    </ul>
+                    <a href="#" class="btn-outline">GCP Guide</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🔵</div>
+                    <h3>Azure</h3>
+                    <p>Microsoft cloud integration</p>
+                    <ul class="program-features">
+                        <li>Azure Functions</li>
+                        <li>Logic Apps</li>
+                        <li>Cognitive Services</li>
+                        <li>DevOps pipelines</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Azure Setup</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🚂</div>
+                    <h3>Railway</h3>
+                    <p>Instant deployments</p>
+                    <ul class="program-features">
+                        <li>One-click deploy</li>
+                        <li>Automatic SSL</li>
+                        <li>Database included</li>
+                        <li>Team collaboration</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Deploy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="section bg-light">
+        <div class="container">
+            <h2>Developer Tools & IDEs</h2>
+            <p class="lead">Integrate Sonar into your development workflow</p>
+
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">📝</div>
+                    <h4>VS Code</h4>
+                    <p>Official extension</p>
+                    <span class="badge badge-popular">Popular</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🧩</div>
+                    <h4>JetBrains</h4>
+                    <p>IntelliJ plugin</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">⚡</div>
+                    <h4>Cursor</h4>
+                    <p>AI-first IDE support</p>
+                    <span class="badge badge-new">New</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🐙</div>
+                    <h4>GitHub Copilot</h4>
+                    <p>Chat integration</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">📮</div>
+                    <h4>Postman</h4>
+                    <p>API collection</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🔧</div>
+                    <h4>Insomnia</h4>
+                    <p>REST client plugin</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">📊</div>
+                    <h4>Jupyter</h4>
+                    <p>Notebook extension</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🎯</div>
+                    <h4>Replit</h4>
+                    <p>Template available</p>
+                    <span class="badge badge-new">New</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="databases" class="section">
+        <div class="container">
+            <h2>Databases & Vector Stores</h2>
+            <p class="lead">Enhance Sonar with persistent memory and context</p>
+
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">🔷</div>
+                    <h4>Pinecone</h4>
+                    <p>Vector database</p>
+                    <span class="badge badge-popular">Popular</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🟢</div>
+                    <h4>Weaviate</h4>
+                    <p>Knowledge graphs</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🔴</div>
+                    <h4>Redis</h4>
+                    <p>Vector search</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🟣</div>
+                    <h4>Qdrant</h4>
+                    <p>Neural search</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🟠</div>
+                    <h4>Chroma</h4>
+                    <p>Embeddings DB</p>
+                    <span class="badge badge-new">New</span>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🔵</div>
+                    <h4>Milvus</h4>
+                    <p>Scalable vectors</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🐘</div>
+                    <h4>PostgreSQL</h4>
+                    <p>pgvector extension</p>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-icon">🍃</div>
+                    <h4>MongoDB</h4>
+                    <p>Atlas Vector Search</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="section bg-dark">
+        <div class="container">
+            <h2>Strategic Partners</h2>
+            <p class="lead">Companies building amazing things with Sonar</p>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3>🏢 Enterprise Partners</h3>
+                    <p>Fortune 500 companies using Sonar at scale</p>
+                    <ul class="program-features">
+                        <li>Custom integrations</li>
+                        <li>Dedicated support</li>
+                        <li>SLA guarantees</li>
+                        <li>Training programs</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <h3>🚀 Startup Partners</h3>
+                    <p>Innovative startups building on Sonar</p>
+                    <ul class="program-features">
+                        <li>Credits program</li>
+                        <li>Technical mentorship</li>
+                        <li>Co-marketing</li>
+                        <li>Investor intros</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <h3>🎓 Academic Partners</h3>
+                    <p>Universities and research institutions</p>
+                    <ul class="program-features">
+                        <li>Research grants</li>
+                        <li>Free access</li>
+                        <li>Curriculum support</li>
+                        <li>Student programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="marketplace" class="section">
+        <div class="container">
+            <h2>Sonar Marketplace</h2>
+            <p class="lead">Discover pre-built integrations and applications</p>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>📚 Templates</h3>
+                    <p>Ready-to-deploy applications</p>
+                    <ul>
+                        <li>Customer support bot</li>
+                        <li>Research assistant</li>
+                        <li>Content generator</li>
+                        <li>Data analyst</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Browse Templates</a>
+                </div>
+
+                <div class="content-card">
+                    <h3>🔌 Plugins</h3>
+                    <p>Extend Sonar capabilities</p>
+                    <ul>
+                        <li>Custom processors</li>
+                        <li>Data connectors</li>
+                        <li>Output formatters</li>
+                        <li>Authentication</li>
+                    </ul>
+                    <a href="#" class="btn-outline">View Plugins</a>
+                </div>
+
+                <div class="content-card">
+                    <h3>🛠️ Tools</h3>
+                    <p>Developer productivity</p>
+                    <ul>
+                        <li>Testing frameworks</li>
+                        <li>Monitoring tools</li>
+                        <li>Debugging utilities</li>
+                        <li>Performance analyzers</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Get Tools</a>
+                </div>
+
+                <div class="content-card">
+                    <h3>📦 Components</h3>
+                    <p>UI components and widgets</p>
+                    <ul>
+                        <li>Chat interfaces</li>
+                        <li>Search bars</li>
+                        <li>Result displays</li>
+                        <li>Citation viewers</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Browse Components</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="section bg-light">
+        <div class="container">
+            <h2>Community Contributions</h2>
+            <p class="lead">Open source projects built by the Sonar community</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>500+</h3>
+                    <p>GitHub Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10K+</h3>
+                    <p>Stars on GitHub</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1K+</h3>
+                    <p>Contributors</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Languages Supported</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn btn-primary">Contribute to Ecosystem</a>
+                <a href="#" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Build Your Integration</h2>
+            <p class="lead">Join the growing ecosystem of developers building with Sonar</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary btn-large">Integration Guide</a>
+                <a href="index.html" class="btn btn-secondary btn-large">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Perplexity Sonar Ecosystem | Developer Relations Strategy by Colin Lowenberg</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonar API - Search-First AI Platform | Perplexity</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .comparison-table th {
+            background: var(--light-bg);
+            font-weight: 600;
+        }
+        .check { color: var(--success-color); }
+        .cross { color: var(--danger-color); }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🔍 Perplexity Sonar API</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#quickstart">Quick Start</a></li>
+                <li><a href="#usecases">Use Cases</a></li>
+                <li><a href="presentation.html" class="cta-btn">Interview Deck</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sonar API: Search-First AI</h1>
+            <p>The only AI API that combines real-time search with language models for always-accurate, source-cited responses</p>
+            <div class="hero-buttons">
+                <a href="#quickstart" class="btn btn-primary">Get Started in 5 Minutes</a>
+                <a href="#comparison" class="btn btn-secondary">Why Choose Sonar?</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="section">
+        <div class="container">
+            <h2>What Makes Sonar Different</h2>
+            <p class="lead">While others focus on pure language models, Sonar is built on search-augmented generation</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Real-Time Information</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Built-in</h3>
+                    <p>Source Citations</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10x</h3>
+                    <p>Better at Facts</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50%</h3>
+                    <p>Lower Hallucination Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section bg-light">
+        <div class="container">
+            <h2>Core Features</h2>
+            <p class="lead">Everything developers need to build search-augmented AI applications</p>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">🔍</div>
+                    <h3>Real-Time Search</h3>
+                    <p>Always current information, never outdated training data</p>
+                    <ul class="program-features">
+                        <li>Web-scale index updated continuously</li>
+                        <li>Breaking news and live events</li>
+                        <li>Domain-specific search filters</li>
+                        <li>Academic and research papers</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">📚</div>
+                    <h3>Automatic Citations</h3>
+                    <p>Every response includes verifiable sources</p>
+                    <ul class="program-features">
+                        <li>Inline source attribution</li>
+                        <li>Confidence scoring</li>
+                        <li>Direct quote extraction</li>
+                        <li>Multi-source synthesis</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized for production applications</p>
+                    <ul class="program-features">
+                        <li>Sub-second response times</li>
+                        <li>Streaming responses</li>
+                        <li>Global edge network</li>
+                        <li>99.9% uptime SLA</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🛠️</div>
+                    <h3>Developer-First</h3>
+                    <p>Built by developers, for developers</p>
+                    <ul class="program-features">
+                        <li>RESTful API design</li>
+                        <li>Official SDKs (Python, JS, Go)</li>
+                        <li>Interactive playground</li>
+                        <li>Comprehensive documentation</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">💰</div>
+                    <h3>Cost-Effective</h3>
+                    <p>Better results at a fraction of the cost</p>
+                    <ul class="program-features">
+                        <li>Pay only for what you use</li>
+                        <li>No hidden fees</li>
+                        <li>Volume discounts</li>
+                        <li>Free tier available</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🔒</div>
+                    <h3>Enterprise Ready</h3>
+                    <p>Security and compliance built-in</p>
+                    <ul class="program-features">
+                        <li>SOC 2 Type II certified</li>
+                        <li>GDPR compliant</li>
+                        <li>Data residency options</li>
+                        <li>SSO/SAML support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quickstart" class="section">
+        <div class="container">
+            <h2>5-Minute Quick Start</h2>
+            <p class="lead">From zero to your first API call in minutes</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Get Your API Key</h3>
+                        <p>Sign up at perplexity.ai/api and get instant access</p>
+                        <div class="code-block">
+export PERPLEXITY_API_KEY="pplx-xxxxxxxxxxxxxxxxxx"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Install the SDK</h3>
+                        <p>Choose your preferred language</p>
+                        <div class="code-block">
+# Python
+pip install perplexity-python
+
+# JavaScript
+npm install @perplexity/sdk
+
+# Go
+go get github.com/perplexity/go-sdk
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Make Your First Call</h3>
+                        <p>Simple search-augmented query</p>
+                        <div class="code-block">
+from perplexity import Perplexity
+
+client = Perplexity(api_key="your-api-key")
+
+response = client.chat.completions.create(
+    model="sonar-small-online",
+    messages=[{
+        "role": "user",
+        "content": "What are the latest AI breakthroughs in 2024?"
+    }]
+)
+
+print(response.choices[0].message.content)
+# Returns current, cited information about AI advances
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">🚀</div>
+                    <div class="timeline-content">
+                        <h3>Build Something Amazing</h3>
+                        <p>You're ready to create search-augmented AI applications!</p>
+                        <ul>
+                            <li>Research assistants with real-time data</li>
+                            <li>Customer support with accurate product info</li>
+                            <li>Content generation with factual accuracy</li>
+                            <li>And much more...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="section bg-dark">
+        <div class="container">
+            <h2>Sonar vs. The Competition</h2>
+            <p class="lead">Why developers choose Sonar for search-augmented AI</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Sonar API</th>
+                        <th>OpenAI</th>
+                        <th>Anthropic</th>
+                        <th>Google</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Real-time web search</strong></td>
+                        <td><span class="check">✓ Built-in</span></td>
+                        <td><span class="cross">✗ Limited</span></td>
+                        <td><span class="cross">✗ No</span></td>
+                        <td><span class="cross">✗ Separate API</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Automatic citations</strong></td>
+                        <td><span class="check">✓ Always included</span></td>
+                        <td><span class="cross">✗ Manual</span></td>
+                        <td><span class="cross">✗ No</span></td>
+                        <td><span class="cross">✗ No</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Current information</strong></td>
+                        <td><span class="check">✓ Real-time</span></td>
+                        <td><span class="cross">✗ Training cutoff</span></td>
+                        <td><span class="cross">✗ Training cutoff</span></td>
+                        <td><span class="cross">✗ Limited</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost per 1M tokens</strong></td>
+                        <td><span class="check">✓ $0.20</span></td>
+                        <td>$3.00</td>
+                        <td>$2.50</td>
+                        <td>$1.25</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hallucination rate</strong></td>
+                        <td><span class="check">✓ 50% lower</span></td>
+                        <td>Baseline</td>
+                        <td>Similar</td>
+                        <td>Similar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Response speed</strong></td>
+                        <td><span class="check">✓ <1 second</span></td>
+                        <td>1-3 seconds</td>
+                        <td>1-2 seconds</td>
+                        <td>2-4 seconds</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="usecases" class="section">
+        <div class="container">
+            <h2>Perfect Use Cases for Sonar</h2>
+            <p class="lead">Where search-augmented AI shines</p>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>📰 News & Media</h3>
+                    <p>Always current, always accurate</p>
+                    <ul>
+                        <li>Real-time news summaries</li>
+                        <li>Fact-checking systems</li>
+                        <li>Trend analysis</li>
+                        <li>Breaking news alerts</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>🔬 Research & Academia</h3>
+                    <p>Cite-worthy information retrieval</p>
+                    <ul>
+                        <li>Literature reviews</li>
+                        <li>Citation networks</li>
+                        <li>Research assistants</li>
+                        <li>Knowledge synthesis</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>💼 Business Intelligence</h3>
+                    <p>Market insights at your fingertips</p>
+                    <ul>
+                        <li>Competitive analysis</li>
+                        <li>Market research</li>
+                        <li>Industry reports</li>
+                        <li>Trend forecasting</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>🛍️ E-commerce</h3>
+                    <p>Product information that sells</p>
+                    <ul>
+                        <li>Product comparisons</li>
+                        <li>Review synthesis</li>
+                        <li>Shopping assistants</li>
+                        <li>Price tracking</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>📚 Education</h3>
+                    <p>Learning with verified facts</p>
+                    <ul>
+                        <li>Study assistants</li>
+                        <li>Homework help</li>
+                        <li>Curriculum development</li>
+                        <li>Fact verification</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>🏥 Healthcare</h3>
+                    <p>Medical information you can trust</p>
+                    <ul>
+                        <li>Symptom checkers</li>
+                        <li>Drug interactions</li>
+                        <li>Research updates</li>
+                        <li>Patient education</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo-apps" class="section bg-light">
+        <div class="container">
+            <h2>Demo Applications</h2>
+            <p class="lead">See Sonar in action - full source code available</p>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">💬</div>
+                    <h3>Research Chat Assistant</h3>
+                    <p>Academic research assistant with citations</p>
+                    <div class="code-block">
+# Real-time research with sources
+response = sonar.research(
+    query="Latest CRISPR advances",
+    sources=["pubmed", "arxiv"],
+    min_year=2024
+)
+                    </div>
+                    <a href="#" class="btn-outline">View on GitHub</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">📊</div>
+                    <h3>Market Intelligence Dashboard</h3>
+                    <p>Track competitors and market trends</p>
+                    <div class="code-block">
+# Monitor industry news
+insights = sonar.analyze_market(
+    companies=["OpenAI", "Anthropic"],
+    timeframe="24h",
+    sentiment=True
+)
+                    </div>
+                    <a href="#" class="btn-outline">View on GitHub</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🎓</div>
+                    <h3>Study Buddy</h3>
+                    <p>Educational assistant with fact-checking</p>
+                    <div class="code-block">
+# Homework help with sources
+answer = sonar.educate(
+    question="Explain quantum computing",
+    level="high_school",
+    include_examples=True
+)
+                    </div>
+                    <a href="#" class="btn-outline">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="developer-tools" class="section">
+        <div class="container">
+            <h2>Developer Resources</h2>
+            <p class="lead">Everything you need to succeed with Sonar</p>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">📖</div>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive guides, API reference, and tutorials to get you started quickly.</p>
+                    <a href="#" class="btn-outline">View Docs</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🎮</div>
+                    <h3>Interactive Playground</h3>
+                    <p>Test API calls directly in your browser without writing any code.</p>
+                    <a href="#" class="btn-outline">Try Playground</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">💻</div>
+                    <h3>SDKs & Libraries</h3>
+                    <p>Official SDKs for Python, JavaScript, Go, Ruby, and more.</p>
+                    <a href="#" class="btn-outline">Get SDKs</a>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>Join thousands of developers building with Sonar.</p>
+                    <a href="#" class="btn-outline">Join Discord</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section bg-dark">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <p class="lead">Start free, scale as you grow</p>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">🎁</div>
+                    <h3>Free Tier</h3>
+                    <p>Perfect for prototyping</p>
+                    <ul class="program-features">
+                        <li>5,000 requests/month</li>
+                        <li>All models included</li>
+                        <li>Community support</li>
+                        <li>No credit card required</li>
+                    </ul>
+                    <h4 style="color: var(--success-color); margin-top: 1rem;">$0/month</h4>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🚀</div>
+                    <h3>Developer</h3>
+                    <p>For production applications</p>
+                    <ul class="program-features">
+                        <li>100,000 requests/month</li>
+                        <li>Priority support</li>
+                        <li>99.9% uptime SLA</li>
+                        <li>Advanced analytics</li>
+                    </ul>
+                    <h4 style="color: var(--primary-light); margin-top: 1rem;">$20/month</h4>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">🏢</div>
+                    <h3>Enterprise</h3>
+                    <p>Custom solutions at scale</p>
+                    <ul class="program-features">
+                        <li>Unlimited requests</li>
+                        <li>Dedicated support</li>
+                        <li>Custom models</li>
+                        <li>On-premise options</li>
+                    </ul>
+                    <h4 style="color: var(--primary-light); margin-top: 1rem;">Contact Sales</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build with Sonar?</h2>
+            <p class="lead">Join thousands of developers creating search-augmented AI applications</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary btn-large">Get API Key</a>
+                <a href="index.html" class="btn btn-secondary btn-large">Back to Strategy</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Perplexity Sonar API | Developer Relations Strategy by Colin Lowenberg</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

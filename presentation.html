@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colin Lowenberg - Perplexity DevRel Manager Interview</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .slide {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide:nth-child(even) {
+            background: var(--light-bg);
+        }
+        .slide-content {
+            max-width: 1000px;
+            width: 100%;
+        }
+        .slide h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .slide h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+        .big-stat {
+            font-size: 5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .timeline-visual {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            position: relative;
+        }
+        .timeline-visual::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        .timeline-node {
+            background: white;
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            z-index: 1;
+        }
+        .achievement-list {
+            font-size: 1.3rem;
+            line-height: 2;
+            list-style: none;
+        }
+        .achievement-list li:before {
+            content: "→ ";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .impact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .impact-number {
+            font-size: 3rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .vision-box {
+            background: var(--gradient-2);
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+        .vision-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Title -->
+    <section class="slide" style="background: var(--gradient-2);">
+        <div class="slide-content" style="text-align: center;">
+            <h1 style="color: white; font-size: 4rem;">Scaling Sonar to 100K Developers</h1>
+            <p style="color: white; font-size: 1.5rem; margin: 2rem 0;">Developer Relations Strategy for Perplexity's API Platform</p>
+            <div style="margin-top: 3rem;">
+                <h3 style="color: white;">Colin Lowenberg</h3>
+                <p style="color: rgba(255,255,255,0.9);">Developer Relations Leader | Platform Ecosystem Builder</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Why Me -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>Why I'm the Right Fit</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number">85,000+</div>
+                    <p><strong>Dabl Club Developers</strong><br>Scaled from 0 to massive community</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">50+</div>
+                    <p><strong>Meraki Partners</strong><br>Built platform ecosystem from scratch</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">300+</div>
+                    <p><strong>Global Events</strong><br>Organized worldwide developer engagement</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">10x</div>
+                    <p><strong>Akash Growth</strong><br>Competing against AWS/Google</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1.3rem; color: var(--primary-color); font-weight: 600;">
+                    "I don't just build communities - I build movements"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Understanding Sonar's Position -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>The Sonar Opportunity</h2>
+            <div class="big-stat">Search-First AI</div>
+            <p style="text-align: center; font-size: 1.5rem; margin-bottom: 3rem;">The unique advantage Perplexity has over OpenAI & Anthropic</p>
+
+            <div class="programs-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="program-card" style="text-align: center;">
+                    <h3 style="color: var(--danger-color);">❌ The Problem</h3>
+                    <p>LLMs hallucinate<br>Outdated training data<br>No source verification</p>
+                </div>
+                <div class="program-card" style="text-align: center;">
+                    <h3 style="color: var(--success-color);">✅ Our Solution</h3>
+                    <p>Real-time search<br>Always current<br>Built-in citations</p>
+                </div>
+                <div class="program-card" style="text-align: center;">
+                    <h3 style="color: var(--primary-color);">🚀 The Result</h3>
+                    <p>50% less hallucination<br>100% verifiable<br>10x better for facts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: 90-Day Plan -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>90-Day Transformation Plan</h2>
+
+            <div class="timeline-visual">
+                <div class="timeline-node">📊</div>
+                <div class="timeline-node">🚀</div>
+                <div class="timeline-node">🌟</div>
+            </div>
+
+            <div class="programs-grid" style="margin-top: 3rem;">
+                <div class="program-card">
+                    <h3>Days 1-30: Listen & Learn</h3>
+                    <ul>
+                        <li>Shadow 10 customer calls</li>
+                        <li>Audit developer journey</li>
+                        <li>Competitive analysis</li>
+                        <li>Interview 20+ developers</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;">
+                        <strong>Deliverable:</strong> "State of Sonar" Report
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <h3>Days 31-60: Build & Ship</h3>
+                    <ul>
+                        <li>Launch "Build with Sonar" showcase</li>
+                        <li>Create interactive playground</li>
+                        <li>5 technical deep-dives</li>
+                        <li>Weekly live coding sessions</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;">
+                        <strong>Deliverable:</strong> 50% faster onboarding
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <h3>Days 61-90: Scale</h3>
+                    <ul>
+                        <li>$50K hackathon launch</li>
+                        <li>3 conference talks</li>
+                        <li>Champions program (100+)</li>
+                        <li>5 key integrations</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: var(--light-bg); border-radius: 8px;">
+                        <strong>Deliverable:</strong> 500 new developers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Content Strategy -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>Content That Converts</h2>
+            <p style="text-align: center; font-size: 1.5rem; margin-bottom: 3rem;">"Show, Don't Tell" - Real code, real results</p>
+
+            <div class="content-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="content-card">
+                    <h3>🎯 Quick Wins</h3>
+                    <ul style="font-size: 1.1rem;">
+                        <li>5-minute quickstarts</li>
+                        <li>Copy-paste solutions</li>
+                        <li>Interactive playground</li>
+                        <li>Video walkthroughs</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>🔬 Deep Dives</h3>
+                    <ul style="font-size: 1.1rem;">
+                        <li>Architecture patterns</li>
+                        <li>Performance optimization</li>
+                        <li>Cost comparisons</li>
+                        <li>Migration guides</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>⚡ Live Content</h3>
+                    <ul style="font-size: 1.1rem;">
+                        <li>Weekly "Sonar Live" streams</li>
+                        <li>Office hours</li>
+                        <li>Community showcases</li>
+                        <li>Hackathon demos</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>🏆 Social Proof</h3>
+                    <ul style="font-size: 1.1rem;">
+                        <li>Developer spotlights</li>
+                        <li>Success stories</li>
+                        <li>App of the week</li>
+                        <li>Community wins</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1.3rem; color: var(--primary-color);">
+                    <strong>Goal:</strong> Every piece of content = working code developers can use TODAY
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Community Programs -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>Community-Led Growth Engine</h2>
+
+            <div class="programs-grid">
+                <div class="program-card" style="background: var(--gradient-2); color: white;">
+                    <h3 style="color: white;">🏆 Sonar Champions</h3>
+                    <p>100 developer advocates in 90 days</p>
+                    <ul style="color: rgba(255,255,255,0.9);">
+                        <li>Early feature access</li>
+                        <li>Direct engineering line</li>
+                        <li>$10K annual credits</li>
+                        <li>Conference speaking</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <h3>💰 Bounty Program</h3>
+                    <p>Get paid to build with Sonar</p>
+                    <ul>
+                        <li>$500-5K per project</li>
+                        <li>Integration bounties</li>
+                        <li>Content rewards</li>
+                        <li>Bug bounties</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <h3>🎪 Monthly Hackathons</h3>
+                    <p>$10K prize pool every month</p>
+                    <ul>
+                        <li>Different themes</li>
+                        <li>Virtual + in-person</li>
+                        <li>Winner showcases</li>
+                        <li>Media coverage</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <h3>🚀 Startup Program</h3>
+                    <p>Accelerate AI startups</p>
+                    <ul>
+                        <li>$25K in credits</li>
+                        <li>Technical mentorship</li>
+                        <li>GTM support</li>
+                        <li>Investor intros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Competitive Differentiation -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>Winning Against OpenAI & Anthropic</h2>
+
+            <div class="vision-box">
+                <h3 style="font-size: 2rem;">The Challenger Playbook</h3>
+                <p style="font-size: 1.3rem;">I've beaten AWS/Google at Akash. I know how to position the underdog to win.</p>
+            </div>
+
+            <div class="programs-grid" style="margin-top: 2rem;">
+                <div class="program-card">
+                    <h3>🎯 Focus on Strengths</h3>
+                    <ul>
+                        <li><strong>Real-time data</strong> vs stale training</li>
+                        <li><strong>Citations</strong> vs hallucinations</li>
+                        <li><strong>Cost efficiency</strong> vs expensive tokens</li>
+                        <li><strong>Speed</strong> vs slow responses</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <h3>🔥 Target Pain Points</h3>
+                    <ul>
+                        <li>Developers frustrated with hallucinations</li>
+                        <li>Apps needing current information</li>
+                        <li>Businesses requiring citations</li>
+                        <li>Startups watching costs</li>
+                    </ul>
+                </div>
+
+                <div class="program-card">
+                    <h3>💡 Create Categories</h3>
+                    <ul>
+                        <li>"Search-First AI" positioning</li>
+                        <li>"Grounded Generation" term</li>
+                        <li>"Real-time RAG" pattern</li>
+                        <li>"Citation-native" development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 8: Success Metrics -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>Measurable Impact</h2>
+            <p style="text-align: center; font-size: 1.5rem; margin-bottom: 3rem;">Clear metrics for explosive growth</p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Q1 2025</h3>
+                    <div class="metric-target">
+                        <span class="metric-number">500</span>
+                        <span class="metric-label">New developers</span>
+                    </div>
+                    <div class="metric-target" style="margin-top: 1rem;">
+                        <span class="metric-number">< 5 min</span>
+                        <span class="metric-label">Time to first call</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Q2 2025</h3>
+                    <div class="metric-target">
+                        <span class="metric-number">5,000</span>
+                        <span class="metric-label">Active developers</span>
+                    </div>
+                    <div class="metric-target" style="margin-top: 1rem;">
+                        <span class="metric-number">10x</span>
+                        <span class="metric-label">API call volume</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Q3 2025</h3>
+                    <div class="metric-target">
+                        <span class="metric-number">25,000</span>
+                        <span class="metric-label">Developer community</span>
+                    </div>
+                    <div class="metric-target" style="margin-top: 1rem;">
+                        <span class="metric-number">50+</span>
+                        <span class="metric-label">NPS score</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Q4 2025</h3>
+                    <div class="metric-target">
+                        <span class="metric-number">100,000</span>
+                        <span class="metric-label">Developers reached</span>
+                    </div>
+                    <div class="metric-target" style="margin-top: 1rem;">
+                        <span class="metric-number">#1</span>
+                        <span class="metric-label">Search-AI leader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 9: My Unique Value -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>What I Bring to Perplexity</h2>
+
+            <ul class="achievement-list">
+                <li><strong>Platform Builder:</strong> Transformed Cisco Meraki from product to platform with 50+ partners</li>
+                <li><strong>Community Scaler:</strong> Grew Dabl Club to 85,000 developers through authentic engagement</li>
+                <li><strong>Content Machine:</strong> 43K+ social following through technical content that converts</li>
+                <li><strong>AI Native:</strong> Currently working with Omi (1000+ apps) and Cloud Security Alliance on AI standards</li>
+                <li><strong>Challenger Mindset:</strong> 10x growth at Akash competing against AWS/Google Cloud</li>
+                <li><strong>Technical Credibility:</strong> Hands-on developer who builds, not just talks</li>
+            </ul>
+
+            <div class="vision-box" style="margin-top: 2rem;">
+                <h3>My Vision for Sonar</h3>
+                <p style="font-size: 1.2rem;">Make Sonar THE default choice for any developer building applications that need real-world, current information. Not just another AI API - but the foundation for a new category of "grounded AI" applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 10: Call to Action -->
+    <section class="slide" style="background: var(--gradient-2);">
+        <div class="slide-content" style="text-align: center;">
+            <h1 style="color: white;">Let's Build Something Amazing</h1>
+
+            <div style="margin: 3rem 0;">
+                <p style="color: white; font-size: 1.5rem; margin-bottom: 2rem;">
+                    Together, we'll make Sonar the developer's first choice<br>
+                    for AI-powered search applications
+                </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 16px; margin: 2rem auto; max-width: 600px;">
+                <h3 style="color: white; margin-bottom: 1rem;">Colin Lowenberg</h3>
+                <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                    AI Developer Relations & Platform Ecosystems<br>
+                    15+ years building developer movements
+                </p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/colinlowenberg" style="color: white;">LinkedIn</a>
+                    <a href="https://twitter.com/colinlowenberg" style="color: white;">Twitter</a>
+                    <a href="https://github.com/colygon" style="color: white;">GitHub</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="index.html" class="btn btn-secondary btn-large">View Full Strategy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questions Slide -->
+    <section class="slide">
+        <div class="slide-content">
+            <h2>Questions for Perplexity</h2>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>📊 Strategic</h3>
+                    <ul>
+                        <li>What's Sonar's unique edge vs OpenAI?</li>
+                        <li>Current developer adoption rate?</li>
+                        <li>Biggest friction points today?</li>
+                        <li>Enterprise vs indie developer focus?</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>🎯 Tactical</h3>
+                    <ul>
+                        <li>Current time to first API call?</li>
+                        <li>Developer feedback mechanism?</li>
+                        <li>Content/documentation gaps?</li>
+                        <li>Community platform preferences?</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>👥 Team</h3>
+                    <ul>
+                        <li>DevRel team structure?</li>
+                        <li>Collaboration with product/eng?</li>
+                        <li>Resources available?</li>
+                        <li>Success metrics for role?</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>🚀 Vision</h3>
+                    <ul>
+                        <li>12-month vision for Sonar?</li>
+                        <li>Key partnerships planned?</li>
+                        <li>International expansion?</li>
+                        <li>New features roadmap?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
