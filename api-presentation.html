@@ -13,7 +13,7 @@
         <nav class="slide-nav">
             <button id="prevSlide" class="nav-btn">←</button>
             <span class="slide-counter">
-                <span id="currentSlide">1</span> / <span id="totalSlides">18</span>
+                <span id="currentSlide">1</span> / <span id="totalSlides">19</span>
             </span>
             <button id="nextSlide" class="nav-btn">→</button>
         </nav>
@@ -388,22 +388,43 @@ response = client.chat.completions.create(
                             </div>
                         </div>
                         <div class="output-formats">
-                            <h3>Output Adaptation Examples</h3>
-                            <div class="format-examples-horizontal">
-                                <div class="format-example">
-                                    <h4>Standard Response</h4>
-                                    <div class="example-output">
-                                        <p>Apple's Q4 2024 revenue reached $94.8 billion, representing an 8.1% year-over-year increase. iPhone sales grew 6% to $46.2 billion, while Services revenue hit a record $22.3 billion. China sales declined 2.5% due to increased competition.</p>
-                                        <div class="citations">
-                                            <span>[1] Apple Inc. Q4 2024 Earnings</span>
-                                            <span>[2] Reuters Financial Report</span>
-                                        </div>
+                            <h3>Output Adaptation</h3>
+                            <div class="format-examples">
+                                <div class="format">
+                                    <strong>Standard:</strong> Conversational with citations
+                                </div>
+                                <div class="format">
+                                    <strong>Structured:</strong> JSON/Schema compliant
+                                </div>
+                                <div class="format">
+                                    <strong>Enhanced:</strong> With images and related questions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Output Format Examples -->
+            <section class="slide" data-slide="10">
+                <div class="slide-content">
+                    <h2>Output Format Examples - Same Data, Three Ways</h2>
+                    <div class="synthesis-process">
+                        <div class="format-examples-horizontal">
+                            <div class="format-example">
+                                <h4>Standard Response</h4>
+                                <div class="example-output">
+                                    <p>Apple's Q4 2024 revenue reached $94.8 billion, representing an 8.1% year-over-year increase. iPhone sales grew 6% to $46.2 billion, while Services revenue hit a record $22.3 billion. China sales declined 2.5% due to increased competition.</p>
+                                    <div class="citations">
+                                        <span>[1] Apple Inc. Q4 2024 Earnings</span>
+                                        <span>[2] Reuters Financial Report</span>
                                     </div>
                                 </div>
-                                <div class="format-example">
-                                    <h4>Structured JSON</h4>
-                                    <div class="example-output structured">
-                                        <pre><code>{
+                            </div>
+                            <div class="format-example">
+                                <h4>Structured JSON</h4>
+                                <div class="example-output structured">
+                                    <pre><code>{
   "company": "Apple Inc.",
   "quarter": "Q4 2024",
   "total_revenue": 94800000000,
@@ -425,25 +446,24 @@ response = client.chat.completions.create(
     }
   }
 }</code></pre>
-                                    </div>
                                 </div>
-                                <div class="format-example">
-                                    <h4>Enhanced Response</h4>
-                                    <div class="example-output enhanced">
-                                        <p>Apple's Q4 2024 revenue reached $94.8 billion, up 8.1% year-over-year. iPhone sales grew 6% while Services hit record highs.</p>
-                                        <div class="enhanced-content">
-                                            <div class="images-section">
-                                                <span class="image-placeholder">📊 Q4 Revenue Chart</span>
-                                                <span class="image-placeholder">📱 iPhone Sales Graph</span>
-                                            </div>
-                                            <div class="related-questions">
-                                                <h5>Related Questions:</h5>
-                                                <ul>
-                                                    <li>What drove Apple's Services growth?</li>
-                                                    <li>How does this compare to competitors?</li>
-                                                    <li>What's the outlook for Q1 2025?</li>
-                                                </ul>
-                                            </div>
+                            </div>
+                            <div class="format-example">
+                                <h4>Enhanced Response</h4>
+                                <div class="example-output enhanced">
+                                    <p>Apple's Q4 2024 revenue reached $94.8 billion, up 8.1% year-over-year. iPhone sales grew 6% while Services hit record highs.</p>
+                                    <div class="enhanced-content">
+                                        <div class="images-section">
+                                            <span class="image-placeholder">📊 Q4 Revenue Chart</span>
+                                            <span class="image-placeholder">📱 iPhone Sales Graph</span>
+                                        </div>
+                                        <div class="related-questions">
+                                            <h5>Related Questions:</h5>
+                                            <ul>
+                                                <li>What drove Apple's Services growth?</li>
+                                                <li>How does this compare to competitors?</li>
+                                                <li>What's the outlook for Q1 2025?</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -453,8 +473,8 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 10: Real Example Walkthrough -->
-            <section class="slide" data-slide="10">
+            <!-- Slide 11: Real Example Walkthrough -->
+            <section class="slide" data-slide="11">
                 <div class="slide-content">
                     <h2>🎬 Real Example: "Latest breakthroughs in quantum computing 2024"</h2>
                     <div class="example-walkthrough">
@@ -500,8 +520,8 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 11: Advanced Search Controls -->
-            <section class="slide" data-slide="11">
+            <!-- Slide 12: Advanced Search Controls -->
+            <section class="slide" data-slide="12">
                 <div class="slide-content">
                     <h2>Intelligent Search Controls</h2>
                     <div class="control-showcase">
@@ -527,8 +547,8 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 12: Result Enrichment -->
-            <section class="slide" data-slide="12">
+            <!-- Slide 13: Result Enrichment -->
+            <section class="slide" data-slide="13">
                 <div class="slide-content">
                     <h2>Rich, Multimodal Results</h2>
                     <div class="enrichment-features">
@@ -554,8 +574,8 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 13: Structured Outputs -->
-            <section class="slide" data-slide="13">
+            <!-- Slide 14: Structured Outputs -->
+            <section class="slide" data-slide="14">
                 <div class="slide-content">
                     <h2>Structured Outputs - Guaranteed Formats</h2>
                     <div class="structured-example">
@@ -591,8 +611,8 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 14: File Processing -->
-            <section class="slide" data-slide="14">
+            <!-- Slide 15: File Processing -->
+            <section class="slide" data-slide="15">
                 <div class="slide-content">
                     <h2>Advanced Document Processing</h2>
                     <div class="file-features">
@@ -629,8 +649,8 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 15: Async Processing -->
-            <section class="slide" data-slide="15">
+            <!-- Slide 16: Async Processing -->
+            <section class="slide" data-slide="16">
                 <div class="slide-content">
                     <h2>Asynchronous API for Complex Tasks</h2>
                     <div class="async-workflow">
@@ -639,7 +659,7 @@ response = client.chat.completions.create(
                             <h3>Submit Job</h3>
                             <pre><code>job = client.async_jobs.create(
     model="llama-3.1-sonar-large-128k-online",
-    messages=complex_research_query
+    messages=messages
 )</code></pre>
                         </div>
                         <div class="workflow-arrow">→</div>
@@ -661,8 +681,8 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 16: Zero Data Retention -->
-            <section class="slide" data-slide="16">
+            <!-- Slide 17: Zero Data Retention -->
+            <section class="slide" data-slide="17">
                 <div class="slide-content">
                     <h2>🔒 Zero Data Retention Guarantee</h2>
                     <div class="privacy-showcase">
@@ -699,15 +719,18 @@ response = client.chat.completions.create(
                 </div>
             </section>
 
-            <!-- Slide 17: Real-World Applications -->
-            <section class="slide" data-slide="17">
+            <!-- Slide 18: Real-World Applications -->
+            <section class="slide" data-slide="18">
                 <div class="slide-content">
                     <h2>Real-World Applications</h2>
                     <div class="use-cases">
                         <div class="use-case">
                             <h3>📰 Real-time News Analysis</h3>
                             <pre><code>search_recency_filter="hour"
-search_domain_filter=["include:reuters.com", "include:bloomberg.com"]</code></pre>
+search_domain_filter=[
+  "include:reuters.com",
+  "include:bloomberg.com"
+]</code></pre>
                         </div>
                         <div class="use-case">
                             <h3>🔬 Academic Research</h3>
@@ -717,21 +740,28 @@ return_related_questions=True</code></pre>
                         </div>
                         <div class="use-case">
                             <h3>💰 Financial Dashboard</h3>
-                            <pre><code>response_format={"type": "json_object", "schema": financial_schema}
+                            <pre><code>response_format={
+  "type": "json_object",
+  "schema": financial_schema
+}
 search_domain_filter=["include:sec.gov"]</code></pre>
                         </div>
                         <div class="use-case">
                             <h3>📋 Document Intelligence</h3>
-                            <pre><code># Upload contracts, extract structured data
-{"type": "document", "document": {"data": contract_pdf}}
-response_format={"type": "json_object", "schema": extraction_schema}</code></pre>
+                            <pre><code># Upload and extract data
+{"type": "document",
+ "document": {"data": contract_pdf}}
+response_format={
+  "type": "json_object",
+  "schema": extraction_schema
+}</code></pre>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 18: Closing -->
-            <section class="slide" data-slide="18">
+            <!-- Slide 19: Closing -->
+            <section class="slide" data-slide="19">
                 <div class="slide-content closing-slide">
                     <div class="perplexity-logo">
                         <svg viewBox="0 0 200 200" class="logo-animation">

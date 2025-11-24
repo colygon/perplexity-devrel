@@ -383,6 +383,17 @@ pre code {
 .workflow-step {
     flex: 1;
     text-align: left;
+    min-width: 0; /* Allow shrinking */
+}
+
+.workflow-step pre {
+    font-size: 0.85em;
+    overflow-x: auto;
+}
+
+.workflow-step code {
+    word-break: break-word;
+    white-space: pre-wrap;
 }
 
 .step-number {
@@ -466,16 +477,29 @@ pre code {
 .use-cases {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin: 30px 0;
+    gap: 25px;
+    margin: 30px auto;
+    max-width: 1000px; /* Limit total width */
 }
 
 .use-case {
     background: rgba(30, 35, 60, 0.6);
     border: 1px solid rgba(107, 70, 193, 0.3);
     border-radius: 12px;
-    padding: 25px;
+    padding: 20px;
     text-align: left;
+    max-width: 480px; /* Limit individual card width */
+}
+
+.use-case pre {
+    font-size: 0.8em;
+    overflow-x: auto;
+    margin: 15px 0 0 0;
+}
+
+.use-case code {
+    font-size: 0.85em;
+    line-height: 1.4;
 }
 
 /* Closing Slide */
