@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Perplexity Advantage - OpenAI Compatibility and Unique Controls</title>
+    <link rel="stylesheet" href="api-presentation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide Navigation -->
+        <nav class="slide-nav">
+            <button id="prevSlide" class="nav-btn">←</button>
+            <span class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">18</span>
+            </span>
+            <button id="nextSlide" class="nav-btn">→</button>
+        </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-wrapper">
+
+            <!-- Slide 1: Title Slide -->
+            <section class="slide active" data-slide="1">
+                <div class="slide-content title-slide">
+                    <div class="perplexity-logo">
+                        <svg viewBox="0 0 200 200" class="logo-animation">
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="#6B46C1" stroke-width="3"/>
+                            <path d="M70 100 L100 70 L130 100 L100 130 Z" fill="#6B46C1"/>
+                        </svg>
+                    </div>
+                    <h1>The Perplexity Advantage</h1>
+                    <h2>OpenAI Compatibility and Unique Controls</h2>
+                    <p class="subtitle">Enterprise-grade AI with seamless migration, advanced search controls, and zero data retention</p>
+                </div>
+            </section>
+
+            <!-- Slide 2: Seamless Migration -->
+            <section class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h2>Effortless Migration from OpenAI</h2>
+                    <div class="code-comparison">
+                        <div class="code-panel">
+                            <h3>OpenAI</h3>
+                            <pre><code class="language-python">from openai import OpenAI
+
+client = OpenAI(api_key="sk-...")
+
+response = client.chat.completions.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "Hello"}],
+    temperature=0.7,
+    max_tokens=150
+)</code></pre>
+                        </div>
+                        <div class="code-panel">
+                            <h3>Perplexity</h3>
+                            <pre><code class="language-python">from openai import OpenAI
+
+client = OpenAI(
+    api_key="pplx-...",
+    base_url="https://api.perplexity.ai"
+)
+
+response = client.chat.completions.create(
+    model="llama-3.1-sonar-large-128k-online",
+    messages=[{"role": "user", "content": "Hello"}],
+    temperature=0.7,
+    max_tokens=150
+)</code></pre>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <p>✓ Just change the base URL and API key - all your existing code works!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Standard Parameters -->
+            <section class="slide" data-slide="3">
+                <div class="slide-content">
+                    <h2>All Standard OpenAI Parameters Supported</h2>
+                    <div class="parameters-grid">
+                        <div class="param-card">
+                            <h4>model</h4>
+                            <p>Select from Perplexity's model lineup</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>messages</h4>
+                            <p>Standard conversation array format</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>temperature</h4>
+                            <p>Control response randomness (0-2)</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>max_tokens</h4>
+                            <p>Set response length limits</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>top_p</h4>
+                            <p>Nucleus sampling control</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>stream</h4>
+                            <p>Real-time streamed responses</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>frequency_penalty</h4>
+                            <p>Control word repetition</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>presence_penalty</h4>
+                            <p>Manage topic diversity</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Search Superpowers -->
+            <section class="slide" data-slide="4">
+                <div class="slide-content">
+                    <h2>Perplexity-Exclusive Search Superpowers</h2>
+                    <div class="feature-showcase">
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <h3>search_domain_filter</h3>
+                            <p>Include or exclude specific domains</p>
+                            <code>["include:arxiv.org", "exclude:reddit.com"]</code>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📅</div>
+                            <h3>search_recency_filter</h3>
+                            <p>Filter by content freshness</p>
+                            <code>"month", "week", "day", "hour"</code>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <h3>search_context_size</h3>
+                            <p>Control search depth</p>
+                            <code>"low" | "medium" | "high"</code>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎓</div>
+                            <h3>search_mode</h3>
+                            <p>Web or academic sources</p>
+                            <code>"web" | "academic"</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW: How Perplexity Works Section -->
+
+            <!-- Slide 5: How Perplexity Works - Overview -->
+            <section class="slide" data-slide="5">
+                <div class="slide-content">
+                    <h2>🧠 How Perplexity Works: The Intelligence Pipeline</h2>
+                    <div class="pipeline-overview">
+                        <div class="pipeline-stage">
+                            <div class="stage-icon">📝</div>
+                            <h3>1. Query Analysis</h3>
+                            <p>Parse intent and context</p>
+                        </div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-stage">
+                            <div class="stage-icon">🎯</div>
+                            <h3>2. Mode Selection</h3>
+                            <p>Choose search strategy</p>
+                        </div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-stage">
+                            <div class="stage-icon">🔍</div>
+                            <h3>3. Search Execution</h3>
+                            <p>Retrieve relevant data</p>
+                        </div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-stage">
+                            <div class="stage-icon">✨</div>
+                            <h3>4. Synthesis</h3>
+                            <p>Generate final answer</p>
+                        </div>
+                    </div>
+                    <div class="highlight-box" style="margin-top: 40px;">
+                        <p>Perplexity's multi-stage pipeline ensures accurate, relevant, and up-to-date responses</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Query Analysis Deep Dive -->
+            <section class="slide" data-slide="6">
+                <div class="slide-content">
+                    <h2>📝 Stage 1: Intelligent Query Analysis</h2>
+                    <div class="analysis-breakdown">
+                        <div class="analysis-component">
+                            <h3>Intent Classification</h3>
+                            <div class="intent-examples">
+                                <div class="intent-type">
+                                    <span class="label">Factual Query</span>
+                                    <code>"What is the capital of France?"</code>
+                                    <span class="outcome">→ May skip search</span>
+                                </div>
+                                <div class="intent-type">
+                                    <span class="label">Current Events</span>
+                                    <code>"Latest AI news today"</code>
+                                    <span class="outcome">→ Requires fresh search</span>
+                                </div>
+                                <div class="intent-type">
+                                    <span class="label">Research</span>
+                                    <code>"Compare quantum computing approaches"</code>
+                                    <span class="outcome">→ Deep search needed</span>
+                                </div>
+                                <div class="intent-type">
+                                    <span class="label">Creative</span>
+                                    <code>"Write a poem about coding"</code>
+                                    <span class="outcome">→ No search required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="key-signals">
+                            <h3>Signals Analyzed</h3>
+                            <ul>
+                                <li>🕐 Temporal markers ("today", "latest", "2024")</li>
+                                <li>🎓 Academic indicators ("research", "study", "paper")</li>
+                                <li>📊 Data needs (statistics, numbers, metrics)</li>
+                                <li>🌍 Geographic context (locations, regions)</li>
+                                <li>🏢 Domain specificity (tech, finance, health)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Search Mode Decision -->
+            <section class="slide" data-slide="7">
+                <div class="slide-content">
+                    <h2>🎯 Stage 2: Dynamic Search Mode Selection</h2>
+                    <div class="mode-decision-tree">
+                        <div class="decision-flow">
+                            <div class="decision-node main">
+                                <h3>Query Received</h3>
+                            </div>
+                            <div class="decision-branches">
+                                <div class="branch">
+                                    <div class="condition">Academic Terms Detected?</div>
+                                    <div class="decision-node academic">
+                                        <h4>Academic Mode</h4>
+                                        <p>Search: arXiv, PubMed, Google Scholar</p>
+                                        <code>search_mode="academic"</code>
+                                    </div>
+                                </div>
+                                <div class="branch">
+                                    <div class="condition">Time-Sensitive?</div>
+                                    <div class="decision-node realtime">
+                                        <h4>Real-time Web</h4>
+                                        <p>Priority: Recent results</p>
+                                        <code>search_recency_filter="hour"</code>
+                                    </div>
+                                </div>
+                                <div class="branch">
+                                    <div class="condition">Domain-Specific?</div>
+                                    <div class="decision-node targeted">
+                                        <h4>Targeted Search</h4>
+                                        <p>Filter: Specific domains</p>
+                                        <code>search_domain_filter=[...]</code>
+                                    </div>
+                                </div>
+                                <div class="branch">
+                                    <div class="condition">General Knowledge?</div>
+                                    <div class="decision-node nosearch">
+                                        <h4>No Search</h4>
+                                        <p>Use: Model knowledge only</p>
+                                        <code>disable_search=True</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Search Execution Strategy -->
+            <section class="slide" data-slide="8">
+                <div class="slide-content">
+                    <h2>🔍 Stage 3: Intelligent Search Execution</h2>
+                    <div class="search-strategy">
+                        <div class="strategy-grid">
+                            <div class="strategy-card">
+                                <h3>🌐 Web Coverage Strategy</h3>
+                                <div class="strategy-details">
+                                    <p><strong>Broad Search:</strong></p>
+                                    <ul>
+                                        <li>Multiple search engines queried</li>
+                                        <li>20-50 sources evaluated</li>
+                                        <li>Cross-referenced for accuracy</li>
+                                    </ul>
+                                    <p><strong>Targeted Search:</strong></p>
+                                    <ul>
+                                        <li>Domain-filtered queries</li>
+                                        <li>5-10 authoritative sources</li>
+                                        <li>Deep content extraction</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="strategy-card">
+                                <h3>📚 Source Ranking Algorithm</h3>
+                                <div class="ranking-factors">
+                                    <div class="factor">
+                                        <span class="weight">35%</span>
+                                        <span>Relevance Score</span>
+                                    </div>
+                                    <div class="factor">
+                                        <span class="weight">25%</span>
+                                        <span>Source Authority</span>
+                                    </div>
+                                    <div class="factor">
+                                        <span class="weight">20%</span>
+                                        <span>Content Freshness</span>
+                                    </div>
+                                    <div class="factor">
+                                        <span class="weight">20%</span>
+                                        <span>Information Density</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="context-control">
+                            <h3>Context Size Impact</h3>
+                            <div class="context-levels">
+                                <div class="level low">
+                                    <h4>Low</h4>
+                                    <p>3-5 sources • Fast • Cost-effective</p>
+                                </div>
+                                <div class="level medium">
+                                    <h4>Medium</h4>
+                                    <p>10-15 sources • Balanced • Standard</p>
+                                </div>
+                                <div class="level high">
+                                    <h4>High</h4>
+                                    <p>20+ sources • Comprehensive • Research-grade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Answer Synthesis -->
+            <section class="slide" data-slide="9">
+                <div class="slide-content">
+                    <h2>✨ Stage 4: Intelligent Answer Synthesis</h2>
+                    <div class="synthesis-process">
+                        <div class="synthesis-flow">
+                            <div class="synth-step">
+                                <h3>1. Information Extraction</h3>
+                                <p>Pull key facts from each source</p>
+                                <div class="example-box">
+                                    <code>Source 1: "GDP grew 3.2% in Q3"</code>
+                                    <code>Source 2: "Inflation at 2.1%"</code>
+                                    <code>Source 3: "Fed signals rate pause"</code>
+                                </div>
+                            </div>
+                            <div class="synth-arrow">↓</div>
+                            <div class="synth-step">
+                                <h3>2. Fact Verification</h3>
+                                <p>Cross-reference and validate claims</p>
+                                <div class="verification-grid">
+                                    <span class="verified">✓ Consistent across sources</span>
+                                    <span class="conflict">⚠ Conflicting data resolved</span>
+                                    <span class="citation">[1][2] Citations added</span>
+                                </div>
+                            </div>
+                            <div class="synth-arrow">↓</div>
+                            <div class="synth-step">
+                                <h3>3. Coherent Generation</h3>
+                                <p>Compose natural, accurate response</p>
+                                <div class="generation-features">
+                                    <span>📝 Natural language flow</span>
+                                    <span>🔗 Source attribution</span>
+                                    <span>📊 Structured if requested</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="output-formats">
+                            <h3>Output Adaptation</h3>
+                            <div class="format-examples">
+                                <div class="format">
+                                    <strong>Standard:</strong> Conversational with citations
+                                </div>
+                                <div class="format">
+                                    <strong>Structured:</strong> JSON/Schema compliant
+                                </div>
+                                <div class="format">
+                                    <strong>Enhanced:</strong> With images and related questions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Real Example Walkthrough -->
+            <section class="slide" data-slide="10">
+                <div class="slide-content">
+                    <h2>🎬 Real Example: "Latest breakthroughs in quantum computing 2024"</h2>
+                    <div class="example-walkthrough">
+                        <div class="walkthrough-stage">
+                            <h3>1️⃣ Query Analysis</h3>
+                            <div class="analysis-result">
+                                <p>✓ Temporal marker: "latest", "2024"</p>
+                                <p>✓ Technical domain: "quantum computing"</p>
+                                <p>✓ Research intent: "breakthroughs"</p>
+                                <p class="decision">→ Decision: Fresh academic + tech search needed</p>
+                            </div>
+                        </div>
+                        <div class="walkthrough-stage">
+                            <h3>2️⃣ Search Configuration</h3>
+                            <pre><code>{
+  "search_mode": "web",  // Not purely academic
+  "search_recency_filter": "month",
+  "search_domain_filter": [
+    "include:arxiv.org",
+    "include:nature.com",
+    "include:ieee.org",
+    "include:quantumcomputing.com"
+  ],
+  "search_context_size": "high"
+}</code></pre>
+                        </div>
+                        <div class="walkthrough-stage">
+                            <h3>3️⃣ Sources Found</h3>
+                            <div class="source-list">
+                                <div class="source">📄 arXiv: "Logical quantum processor based on..." [Nov 2024]</div>
+                                <div class="source">📰 Nature: "IBM demonstrates 1000+ qubit processor" [Oct 2024]</div>
+                                <div class="source">🔬 Google Research: "Willow chip achieves..." [Dec 2024]</div>
+                                <div class="source">📊 IEEE: "Error correction breakthrough..." [Sep 2024]</div>
+                            </div>
+                        </div>
+                        <div class="walkthrough-stage">
+                            <h3>4️⃣ Synthesized Answer</h3>
+                            <div class="final-answer">
+                                <p>"The latest quantum computing breakthroughs in 2024 include Google's Willow chip achieving below-threshold error correction [1], IBM's Condor processor exceeding 1000 qubits [2], and Harvard's demonstration of logical qubits with 99.5% fidelity [3]..."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Advanced Search Controls -->
+            <section class="slide" data-slide="11">
+                <div class="slide-content">
+                    <h2>Intelligent Search Controls</h2>
+                    <div class="control-showcase">
+                        <div class="control-card">
+                            <h3>🤖 enable_search_classifier</h3>
+                            <p>Let AI automatically decide when web search is needed</p>
+                            <pre><code>response = client.chat.completions.create(
+    model="llama-3.1-sonar-large-128k-online",
+    messages=messages,
+    enable_search_classifier=True  # Smart search activation
+)</code></pre>
+                        </div>
+                        <div class="control-card">
+                            <h3>🔌 disable_search</h3>
+                            <p>Turn off web search for deterministic, offline responses</p>
+                            <pre><code>response = client.chat.completions.create(
+    model="llama-3.1-sonar-large-128k-online",
+    messages=messages,
+    disable_search=True  # Pure model knowledge only
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Result Enrichment -->
+            <section class="slide" data-slide="12">
+                <div class="slide-content">
+                    <h2>Rich, Multimodal Results</h2>
+                    <div class="enrichment-features">
+                        <div class="enrich-card">
+                            <div class="icon-large">🖼️</div>
+                            <h3>return_images</h3>
+                            <p>Include relevant image URLs in responses</p>
+                            <div class="example-box">
+                                <code>return_images=True</code>
+                                <p>→ Adds visual evidence and context to your answers</p>
+                            </div>
+                        </div>
+                        <div class="enrich-card">
+                            <div class="icon-large">💡</div>
+                            <h3>return_related_questions</h3>
+                            <p>Generate intelligent follow-up questions</p>
+                            <div class="example-box">
+                                <code>return_related_questions=True</code>
+                                <p>→ Boost user engagement and discovery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Structured Outputs -->
+            <section class="slide" data-slide="13">
+                <div class="slide-content">
+                    <h2>Structured Outputs - Guaranteed Formats</h2>
+                    <div class="structured-example">
+                        <h3>Define Your Schema</h3>
+                        <pre><code class="language-python">schema = {
+    "type": "object",
+    "properties": {
+        "company": {"type": "string"},
+        "revenue": {"type": "number"},
+        "growth_rate": {"type": "string", "pattern": "^\\d+\\.\\d+%$"},
+        "key_metrics": {
+            "type": "array",
+            "items": {"type": "string"}
+        }
+    },
+    "required": ["company", "revenue", "growth_rate"]
+}
+
+response = client.chat.completions.create(
+    model="llama-3.1-sonar-large-128k-online",
+    messages=[{"role": "user", "content": "Analyze Apple's latest earnings"}],
+    response_format={"type": "json_object", "schema": schema}
+)</code></pre>
+                        <div class="result-arrow">↓</div>
+                        <h3>Get Machine-Readable Results</h3>
+                        <pre><code class="language-json">{
+    "company": "Apple Inc.",
+    "revenue": 94800000000,
+    "growth_rate": "8.1%",
+    "key_metrics": ["iPhone sales up 6%", "Services revenue $22.3B", "China sales declined 2.5%"]
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: File Processing -->
+            <section class="slide" data-slide="14">
+                <div class="slide-content">
+                    <h2>Advanced Document Processing</h2>
+                    <div class="file-features">
+                        <div class="file-support">
+                            <h3>Supported Formats</h3>
+                            <div class="format-badges">
+                                <span class="badge">📄 PDF</span>
+                                <span class="badge">📝 DOCX</span>
+                                <span class="badge">📃 TXT</span>
+                                <span class="badge">🔤 MD</span>
+                            </div>
+                        </div>
+                        <div class="file-example">
+                            <pre><code class="language-python">import base64
+
+# Upload and analyze documents
+with open("report.pdf", "rb") as file:
+    file_content = base64.b64encode(file.read()).decode()
+
+response = client.chat.completions.create(
+    model="llama-3.1-sonar-large-128k-online",
+    messages=[
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": "Summarize key findings"},
+                {"type": "document", "document": {"data": file_content, "type": "pdf"}}
+            ]
+        }
+    ]
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Async Processing -->
+            <section class="slide" data-slide="15">
+                <div class="slide-content">
+                    <h2>Asynchronous API for Complex Tasks</h2>
+                    <div class="async-workflow">
+                        <div class="workflow-step">
+                            <div class="step-number">1</div>
+                            <h3>Submit Job</h3>
+                            <pre><code>job = client.async_jobs.create(
+    model="llama-3.1-sonar-large-128k-online",
+    messages=complex_research_query
+)</code></pre>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <h3>Check Status</h3>
+                            <pre><code>status = client.async_jobs.get(job.id)
+# Status: pending → processing → complete</code></pre>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <h3>Retrieve Results</h3>
+                            <pre><code>if status.status == "complete":
+    results = status.result</code></pre>
+                        </div>
+                    </div>
+                    <p class="async-note">Perfect for batch processing, complex research, and long-running analysis tasks</p>
+                </div>
+            </section>
+
+            <!-- Slide 16: Zero Data Retention -->
+            <section class="slide" data-slide="16">
+                <div class="slide-content">
+                    <h2>🔒 Zero Data Retention Guarantee</h2>
+                    <div class="privacy-showcase">
+                        <div class="privacy-grid">
+                            <div class="privacy-card retained">
+                                <h3>What We Keep</h3>
+                                <ul>
+                                    <li>✓ API key IDs</li>
+                                    <li>✓ Token counts for billing</li>
+                                    <li>✓ Timestamp metadata</li>
+                                </ul>
+                            </div>
+                            <div class="privacy-card not-retained">
+                                <h3>What We Never Store</h3>
+                                <ul>
+                                    <li>✗ Your prompts</li>
+                                    <li>✗ AI responses</li>
+                                    <li>✗ Uploaded documents</li>
+                                    <li>✗ Search queries</li>
+                                    <li>✗ Any conversation content</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="security-features">
+                            <h3>Enterprise Security Features</h3>
+                            <div class="feature-badges">
+                                <span>🔑 API Key Rotation</span>
+                                <span>📊 Audit Trails</span>
+                                <span>🛡️ SOC 2 Compliance</span>
+                                <span>🔐 End-to-End Encryption</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 17: Real-World Applications -->
+            <section class="slide" data-slide="17">
+                <div class="slide-content">
+                    <h2>Real-World Applications</h2>
+                    <div class="use-cases">
+                        <div class="use-case">
+                            <h3>📰 Real-time News Analysis</h3>
+                            <pre><code>search_recency_filter="hour"
+search_domain_filter=["include:reuters.com", "include:bloomberg.com"]</code></pre>
+                        </div>
+                        <div class="use-case">
+                            <h3>🔬 Academic Research</h3>
+                            <pre><code>search_mode="academic"
+search_context_size="high"
+return_related_questions=True</code></pre>
+                        </div>
+                        <div class="use-case">
+                            <h3>💰 Financial Dashboard</h3>
+                            <pre><code>response_format={"type": "json_object", "schema": financial_schema}
+search_domain_filter=["include:sec.gov"]</code></pre>
+                        </div>
+                        <div class="use-case">
+                            <h3>📋 Document Intelligence</h3>
+                            <pre><code># Upload contracts, extract structured data
+{"type": "document", "document": {"data": contract_pdf}}
+response_format={"type": "json_object", "schema": extraction_schema}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 18: Closing -->
+            <section class="slide" data-slide="18">
+                <div class="slide-content closing-slide">
+                    <div class="perplexity-logo">
+                        <svg viewBox="0 0 200 200" class="logo-animation">
+                            <circle cx="100" cy="100" r="90" fill="none" stroke="#6B46C1" stroke-width="3"/>
+                            <path d="M70 100 L100 70 L130 100 L100 130 Z" fill="#6B46C1"/>
+                        </svg>
+                    </div>
+                    <h1>Build Smarter with Perplexity</h1>
+                    <div class="key-benefits">
+                        <div class="benefit">
+                            <span class="icon">✓</span>
+                            <p>OpenAI-compatible for instant migration</p>
+                        </div>
+                        <div class="benefit">
+                            <span class="icon">✓</span>
+                            <p>Advanced search controls unique to Perplexity</p>
+                        </div>
+                        <div class="benefit">
+                            <span class="icon">✓</span>
+                            <p>Structured outputs and file processing</p>
+                        </div>
+                        <div class="benefit">
+                            <span class="icon">✓</span>
+                            <p>Zero data retention guarantee</p>
+                        </div>
+                        <div class="benefit">
+                            <span class="icon">✓</span>
+                            <p>Enterprise security and compliance</p>
+                        </div>
+                    </div>
+                    <div class="cta-section">
+                        <a href="https://docs.perplexity.ai" class="cta-button">Get Started</a>
+                        <p class="cta-text">Ready for OpenAI developers. Designed for the future.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Keyboard shortcuts help -->
+        <div class="help-text">
+            Use arrow keys or buttons to navigate • Press F for fullscreen • ESC to exit
+        </div>
+    </div>
+
+    <script src="api-presentation.js"></script>
+</body>
+</html>
