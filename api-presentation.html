@@ -388,16 +388,64 @@ response = client.chat.completions.create(
                             </div>
                         </div>
                         <div class="output-formats">
-                            <h3>Output Adaptation</h3>
-                            <div class="format-examples">
-                                <div class="format">
-                                    <strong>Standard:</strong> Conversational with citations
+                            <h3>Output Adaptation Examples</h3>
+                            <div class="format-examples-horizontal">
+                                <div class="format-example">
+                                    <h4>Standard Response</h4>
+                                    <div class="example-output">
+                                        <p>Apple's Q4 2024 revenue reached $94.8 billion, representing an 8.1% year-over-year increase. iPhone sales grew 6% to $46.2 billion, while Services revenue hit a record $22.3 billion. China sales declined 2.5% due to increased competition.</p>
+                                        <div class="citations">
+                                            <span>[1] Apple Inc. Q4 2024 Earnings</span>
+                                            <span>[2] Reuters Financial Report</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="format">
-                                    <strong>Structured:</strong> JSON/Schema compliant
+                                <div class="format-example">
+                                    <h4>Structured JSON</h4>
+                                    <div class="example-output structured">
+                                        <pre><code>{
+  "company": "Apple Inc.",
+  "quarter": "Q4 2024",
+  "total_revenue": 94800000000,
+  "growth_rate": "8.1%",
+  "segments": {
+    "iphone": {
+      "revenue": 46200000000,
+      "growth": "6%"
+    },
+    "services": {
+      "revenue": 22300000000,
+      "record": true
+    }
+  },
+  "regional_performance": {
+    "china": {
+      "change": "-2.5%",
+      "reason": "increased competition"
+    }
+  }
+}</code></pre>
+                                    </div>
                                 </div>
-                                <div class="format">
-                                    <strong>Enhanced:</strong> With images and related questions
+                                <div class="format-example">
+                                    <h4>Enhanced Response</h4>
+                                    <div class="example-output enhanced">
+                                        <p>Apple's Q4 2024 revenue reached $94.8 billion, up 8.1% year-over-year. iPhone sales grew 6% while Services hit record highs.</p>
+                                        <div class="enhanced-content">
+                                            <div class="images-section">
+                                                <span class="image-placeholder">📊 Q4 Revenue Chart</span>
+                                                <span class="image-placeholder">📱 iPhone Sales Graph</span>
+                                            </div>
+                                            <div class="related-questions">
+                                                <h5>Related Questions:</h5>
+                                                <ul>
+                                                    <li>What drove Apple's Services growth?</li>
+                                                    <li>How does this compare to competitors?</li>
+                                                    <li>What's the outlook for Q1 2025?</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
